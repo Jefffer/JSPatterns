@@ -14,6 +14,4 @@ Object.defineProperty(task, 'concat', {
 	configurable: true
 });
 
-task.concat = 'hi';
-
 console.log(task.concat());
