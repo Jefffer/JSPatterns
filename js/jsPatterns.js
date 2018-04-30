@@ -9,9 +9,20 @@ Object.defineProperty(task, 'concat', {
 	value: function(){
 			return this.title + ' -> ' + this.description;
 	},
-	writable: false,
-	enumerable: true,
-	configurable: true
+	writable: false, //do not let overwrite the property
+	enumerable: false, //do not show this property
+	configurable: false 
 });
 
-console.log(task.concat());
+var urgentTask = Object.create(task) // urgentTask inherint from task
+
+Object.defineProperty(urgentTask, 'concat', {
+	value: function(){
+			return this.title + ' -> ' + 'sopas';
+	},
+	writable: false, //do not let overwrite the property
+	enumerable: false, //do not show this property
+	configurable: false 
+});
+
+console.log(urgentTask.concat());
