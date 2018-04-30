@@ -11,8 +11,8 @@ Object.defineProperty(task, 'concat', {
 	value: function(){
 			return this.title + ' -> ' + this.description;
 	},
-	writable: false, //do not let overwrite the property
-	enumerable: false, //do not show this property
+	writable: false, // do not let overwrite the property
+	enumerable: false, // do not show this property
 	configurable: false 
 });
 
