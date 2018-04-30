@@ -1,9 +1,11 @@
+// JavaScript - Design Patterns
+
 //var task = Object.create(Object.prototype);
+
 var task = {
 	title : 'My Task',
 	description : 'Task Description'
 };
-
 
 Object.defineProperty(task, 'concat', {
 	value: function(){
